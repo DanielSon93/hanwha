@@ -399,17 +399,17 @@ document.addEventListener('DOMContentLoaded', function(){
 		challenge_title[i].addEventListener('click', function(e){
 			challenge_title[i].classList.add('active');
 			if(i == 0){
-				challenge_title[i].querySelector('img').setAttribute('src', '../image/challenge-me-icon-intro-active.png');
+				challenge_title[i].querySelector('img').setAttribute('src', './image/challenge-me-icon-intro-active.png');
 				challenge_title[i].querySelector('.arrow').classList.add('active');
 				challenge_title[i].parentElement.querySelector('.challenge-me-detail-detail').classList.add('active');
-				challenge_title[1].querySelector('img').setAttribute('src', '../image/challenge-me-icon-wanted.png');
+				challenge_title[1].querySelector('img').setAttribute('src', './image/challenge-me-icon-wanted.png');
 				challenge_title[1].querySelector('.arrow').classList.remove('active');
 				challenge_title[1].parentElement.querySelector('.challenge-me-detail-detail').classList.remove('active');
 			} else {
-				challenge_title[0].querySelector('img').setAttribute('src', '../image/challenge-me-icon-intro.png');
+				challenge_title[0].querySelector('img').setAttribute('src', './image/challenge-me-icon-intro.png');
 				challenge_title[0].querySelector('.arrow').classList.remove('active');
 				challenge_title[0].parentElement.querySelector('.challenge-me-detail-detail').classList.remove('active');
-				challenge_title[i].querySelector('img').setAttribute('src', '../image/challenge-me-icon-wanted-active.png');
+				challenge_title[i].querySelector('img').setAttribute('src', './image/challenge-me-icon-wanted-active.png');
 				challenge_title[i].querySelector('.arrow').classList.add('active');
 				challenge_title[i].parentElement.querySelector('.challenge-me-detail-detail').classList.add('active');
 			}
