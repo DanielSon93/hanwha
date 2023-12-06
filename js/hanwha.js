@@ -162,10 +162,6 @@ document.addEventListener('DOMContentLoaded', function(){
 		menu.addEventListener('mouseenter', function(e){
 			create_depth_menu_html(e.target.id, menu_depth_wrapper, menu.offsetLeft);
 		});
-
-		menu.addEventListener('click', function(e){
-			link_main_menu(e.target.id);
-		});
 	}
 
 	// 헤더 하위메뉴 이벤트
@@ -340,11 +336,6 @@ document.addEventListener('DOMContentLoaded', function(){
 		language_list.classList.remove('display-block');
 	});
 
-	// 한화 로고 클릭 이벤트
-	hanwha_logo_wrapper.addEventListener('click', function(e){
-		location.href = 'https://www.hanwhasolutions.com/ko/';
-	});
-
 	// 슬라이더에서 scroll-down 클릭 시 이동
 	let scroll = document.querySelector('.scroll-down');
 	scroll.addEventListener('click', scroll_move_click);
@@ -483,7 +474,7 @@ function create_depth_menu_html(menu_name, menu_depth_wrapper, menu_start_point)
 			let a = document.createElement('a');
 			a.classList.add('menu-hover', 'header-depth');
 			a.textContent = menu;
-			a.href = depth_menu_link[index];
+			a.href = '#';
 			
 			li.appendChild(a);
 			ul.appendChild(li);
@@ -501,23 +492,6 @@ function create_depth_menu_html(menu_name, menu_depth_wrapper, menu_start_point)
 		menu_depth_wrapper.style.display = 'flex';
 	} else {
 		menu_depth_wrapper.style.display = 'none';
-	}
-}
-
-// 메인 메뉴 클릭 시 링크 지정
-function link_main_menu(menu_name){
-	if(menu_name == 'about-us'){
-		location.href = menu_list_link['about-us'][0];
-	} else if(menu_name == 'business-area'){
-		location.href = menu_list_link['business-area'][0];
-	} else if(menu_name == 'sustainable-management'){
-		location.href = menu_list_link['sustainable-management'][0];
-	} else if(menu_name == 'recruitment'){
-		location.href = menu_list_link['recruitment'][0];
-	} else if(menu_name == 'tour'){
-		location.href = 'https://www.hanwhaenergyinnovation.com/index_kr.html';
-	} else if(menu_name == 'laboratory'){
-		location.href = menu_list_link['about-us'][2];;
 	}
 }
 
